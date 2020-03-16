@@ -55,7 +55,6 @@ body{
         display: grid;
         grid-gap: 20px;
         grid-template-areas: 
-        'load load load'
         'fst fst fst'
         'mealImg instr instr'
         'ingr desc desc';
@@ -120,5 +119,25 @@ body{
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+@media screen and (max-width: 500px){
+       
+    .food-details{
+        padding: 25px;
+        grid-template-areas: 
+        'fst'
+        'mealImg'
+        'instr'
+        'ingr'
+        'desc' !important;
+        grid-template-columns: 1fr !important;
+    } 
+    
+    
+    .image{
+        width: 100%;
+        border-radius: 20px;
+    }
 }
 

@@ -28,7 +28,6 @@ const generateMeals = (meal) => {
     }
 
     const content = `
-        <div class="loader"></div>
         <h2 class="sm-heading first">Your Meal Details are as below</h2>
 
         <img src="${meal.strMealThumb}" class="image" alt="Meal Image">

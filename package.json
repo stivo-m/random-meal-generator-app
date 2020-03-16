@@ -2,9 +2,11 @@
   "name": "random_meal_generator",
   "version": "1.0.0",
   "description": "A random meal generator for the 100projectsIn10Days",
+  "homepage": "https://stivo-m.github.io/random-meal-generator",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Steven Maina",
   "license": "MIT",
