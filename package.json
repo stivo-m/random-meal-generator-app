@@ -1,0 +1,14 @@
+{
+  "name": "random_meal_generator",
+  "version": "1.0.0",
+  "description": "A random meal generator for the 100projectsIn10Days",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Steven Maina",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  }
+}

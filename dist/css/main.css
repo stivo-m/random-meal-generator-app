@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  background-color: #444;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  float: center;
+  justify-items: center;
+  align-items: center;
+  padding: 1rem;
+  background: #434343; }
+  .container .intro {
+    padding: 1rem;
+    background: #424242;
+    text-align: center; }
+    .container .intro .btn-dark {
+      outline: none;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      padding: 1rem 1.5rem;
+      background: yellow;
+      color: black;
+      font-weight: bold;
+      text-transform: uppercase; }
+      .container .intro .btn-dark:hover {
+        transition: all 0.3s ease-out;
+        background: white;
+        color: black; }
+  .container .food-details {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 'load load load' 'fst fst fst' 'mealImg instr instr' 'ingr desc desc';
+    grid-template-columns: repeat(3, 1fr); }
+
+.description {
+  grid-area: desc; }
+
+.image {
+  grid-area: mealImg;
+  width: 250px;
+  border-radius: 20px; }
+
+.instructions {
+  grid-area: instr; }
+
+.ingredients {
+  grid-area: ingr; }
+
+.sm-heading {
+  font-weight: bold;
+  size: 26px;
+  color: yellow; }
+
+.lg-heading {
+  font-weight: bold;
+  font-size: 56px;
+  color: yellow; }
+
+.first {
+  grid-area: fst; }
+
+.loader {
+  grid-area: load;
+  visibility: hidden;
+  border: 16px solid #444;
+  /* Light grey */
+  border-top: 16px solid yellow;
+  /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite; }
+  .loader.show {
+    visibility: visible; }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }

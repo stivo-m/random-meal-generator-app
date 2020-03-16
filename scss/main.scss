@@ -1,0 +1,124 @@
+$primary-color: #444;
+$secondary-color: yellow;
+
+@mixin easeOut {
+    transition: all 0.3s ease-out;
+}
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    
+    background-color: $primary-color;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    float: center;
+    justify-items: center;
+    align-items: center;
+    padding: 1rem;
+    background: darken($primary-color,  0.5);
+
+    .intro{
+        padding: 1rem;
+        background: darken($primary-color,  0.9);
+        text-align: center;
+
+        .btn-dark{
+            outline: none;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            padding: 1rem 1.5rem;
+            background: $secondary-color;
+            color: black;
+            font-weight: bold;
+            text-transform: uppercase;
+           
+
+            &:hover{
+                 @include easeOut;
+                background: white;
+                color: black;
+            }
+        }
+    }
+    .food-details{
+        display: grid;
+        grid-gap: 20px;
+        grid-template-areas: 
+        'load load load'
+        'fst fst fst'
+        'mealImg instr instr'
+        'ingr desc desc';
+        grid-template-columns: repeat(3, 1fr);
+    }  
+}
+
+.description{
+    grid-area: desc;
+}
+
+.image{
+    grid-area: mealImg;
+    width: 250px;
+    border-radius: 20px;
+}
+
+.instructions{
+    grid-area: instr;
+}
+
+
+.ingredients{
+    grid-area: ingr;
+}
+
+
+.sm-heading{
+    font-weight: bold;
+    size: 26px;
+    color: $secondary-color;
+}
+
+.lg-heading{
+    font-weight: bold;
+    font-size: 56px;
+    color: $secondary-color;
+}
+
+
+.first{
+    grid-area: fst;
+}
+
+
+
+.loader {
+    grid-area: load;
+    visibility: hidden;
+  border: 16px solid $primary-color; /* Light grey */
+  border-top: 16px solid $secondary-color; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+
+    &.show{
+        visibility: visible;
+    }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
